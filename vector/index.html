@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="../eqn.css">
+<link rel="stylesheet" href="../table.css">
+<link rel="stylesheet" href="../physicswithdad.css">
+<style>
+.vin {
+	cursor: crosshair;
+}
+</style>
+</head>
+
+<body>
+<script src="../d3.v7.js"></script>
+<script src="../table.js"></script>
+<script src="../eqn.js"></script>
+<h1>What is a vector?</h1>
+<p>Vectors are crucial in the analysis of physics.  A vector is a representation of a quantity (force, acceleration, velocity, ...) that consists of both a magnitude and a direction.  It is usually represented in polar coordinates as an arrow whose length represents the magnitude and a direction indicated as an angle measured counter-clockwise from a positive x-axis.</p>
+<p>The <em>interactive</em> chart below shows a vector in an x-y coordinate plane.  Click anywhere on the chart to explore and familarize yourself with different vectors of your choice.  What's the difference between using only positive angles or not?  How do they relate?</p>
+<p>Here we indicate a vector with the symbol in <b>bold</b> which means it possesses both a magnitude and angle.  Otherwise the symbol represents a scalar and thus only a magnitude.  A vector can be decomposed into components along the x-axis and the y-axis:</p>
+<div id="veqn"></div>
+<script>
+eqn.create([
+	["<b>V<sub>&nbsp</sub></b> ",	"= V<sub>x</sub> <b>i</b> + V<sub>y</sub> <b>j</b>",	"(1)"],
+	["",							"= V cos(θ) <b>i</b> + V sin(θ) <b>j</b>",				"(2)"]
+	], "#veqn", "me");
+</script>
+<p>where <b>i</b> and <b>j</b> are unit vectors along the x and y axes, respectively, and θ is the angle of the vector.  These components are displayed with dashed lines in the chart.</p>
+<div id="container"></div>
+<div id="outdata">
+	<input type="checkbox" id="posangle" name="posangle">
+	<label for="posangle"> Use positive angle only</label>
+</div>
+<br>
+<p style="text-align: right"><small>©2023 Physics with Dad</small></p>
+
+<script src="index.js"></script>
+
+</body>

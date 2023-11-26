@@ -1,0 +1,23 @@
+
+.eqn {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+}
+
+.eqn td:nth-child(2n+1) {
+	text-align: right;
+}
+
+.eqn td:nth-child(1) {
+	width: 20%;
+}
+
+.eqn td:nth-child(3) {
+	width: 10%;
+}
+
+.eqn tr:hover {
+	background-color: #ddd;
+}
+

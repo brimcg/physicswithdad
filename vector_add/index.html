@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="../eqn.css">
+<link rel="stylesheet" href="../table.css">
+<link rel="stylesheet" href="../physicswithdad.css">
+<style>
+#vprop th {
+	background-color: #000099;
+}
+</style>
+</head>
+
+<body>
+<script src="../d3.v7.js"></script>
+<script src="../table.js"></script>
+<script src="../eqn.js"></script>
+<h1>Adding vectors</h1>
+<p>Since vectors have both magnitude and direction, the concept of adding them must be treated carefully.</p>
+<p>To properly add vectors, we need to decompose them into components along the x-axis and the y-axis, as shown in Eq. 2.  The components can then be grouped together as x-components and as y-components, so that like members may be added, as shown in Eq. 3.</p>
+<div id="veqn1"></div>
+<script>
+eqn.create([
+	["<b>V<sub>&nbsp</sub></b>",	"= <b>V<sub>A</sub></b> + <b>V<sub>B</sub></b>",															"(1)"],
+	["",							"= V<sub>Ax</sub> <b>i</b> + V<sub>Ay</sub> <b>j</b> + V<sub>Bx</sub> <b>i</b> + V<sub>By</sub> <b>j</b>",	"(2)"],
+	["",							"= (V<sub>Ax</sub> + V<sub>Bx</sub>) <b>i</b> + (V<sub>Ay</sub> + V<sub>By</sub>)  <b>j</b>",				"(3)"],
+	["<b>V<sub>&nbsp</sub></b>",	"= V<sub>x</sub> <b>i</b> + V<sub>y</sub> <b>j</b>",														"(4)"],
+	], "#veqn1", "me1");
+</script>
+<p>where V<sub>x</sub> = V<sub>Ax</sub> + V<sub>Bx</sub>, and V<sub>y</sub> = V<sub>Ay</sub> + V<sub>By</sub> are the components of the new added vector, shown in Eq. 4.</p>
+<p>This is important:  Eq. 4 tells us that we should treat the x-components and y-components separately when adding vectors, then combine the results at the end to find the resultant vector.  This idea extends to any number of vectors.  The easiest way to analyze probems is to do each component independently.  This method allows us to systematically break down problems into simpler pieces.</p>
+<p>Consider the addition of three vectors</p>
+<div id="veqn2"></div>
+<script>
+eqn.create([
+	["<b>V<sub>&nbsp</sub></b>",	"= <b>V<sub>A</sub></b> + <b>V<sub>B</sub></b> + <b>V<sub>C</sub></b>",	"(5)"],
+	], "#veqn2", "me2");
+</script>
+<p>Treat the components individually:</p>
+<u>x-component</u>
+<div id="veqn3"></div>
+<script>
+eqn.create([
+	["V<sub>x</sub> ",	"= V<sub>Ax</sub> + V<sub>Bx</sub> + V<sub>Cx</sub>",														"(6)"],
+	["",				"= V<sub>A</sub> cos(θ<sub>A</sub>) + V<sub>B</sub> cos(θ<sub>B</sub>) + V<sub>C</sub> cos(θ<sub>C</sub>)",	"(7)"],
+	], "#veqn3", "me3");
+</script>
+<br><u>y-component</u>
+<div id="veqn4"></div>
+<script>
+eqn.create([
+	["V<sub>y</sub> ",	"= V<sub>Ay</sub> + V<sub>By</sub> + V<sub>Cy</sub>",														"(8)"],
+	["",				"= V<sub>A</sub> sin(θ<sub>A</sub>) + V<sub>B</sub> sin(θ<sub>B</sub>) + V<sub>C</sub> sin(θ<sub>C</sub>)",	"(9)"],
+	], "#veqn4", "me4");
+</script>
+<p>and finally combine them using Eq. 4 to get the final result.  As you can see, by breaking the problem into component pieces, it is easier to handle larger problems.</p>
+<h2>Vector Adding Calculator and Visualizer</h2>
+<p>Let's put these calculations to use!  Modify or input your own vectors to see how they add up.  Trace out the x and y components to see how they lead to the final result.</p>
+<div id="indata"></div>
+<div id="container"></div>
+<div id="outdata"></div>
+<br>
+<p style="text-align: right"><small>©2023 Physics with Dad</small></p>
+
+<script src="index.js"></script>
+
+</body>
